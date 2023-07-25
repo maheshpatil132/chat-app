@@ -36,7 +36,7 @@ const send =()=>{
    })
 
   setMessage('')
-  setCall(!call)
+  setCall(!call) 
   window.scrollTo()
 }
 

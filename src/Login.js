@@ -16,6 +16,8 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [account, setAccount] = useState(false);
+
+
   let navigate = useNavigate()
   const dispatch = useDispatch();
   let person = useSelector(state=>state.userReducer)
@@ -87,7 +89,6 @@ const Login = () => {
   const login = (e)=>{
     e.preventDefault();
     auth.signInWithEmailAndPassword( email,password).then(result=>{
-      // user = firebase.auth().currentUser;
       user = auth.currentUser
       console.log(user);
     }).then(()=>{
